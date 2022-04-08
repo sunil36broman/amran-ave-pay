@@ -1,0 +1,63 @@
+body{
+   
+}
+.custom-color{
+   
+}
+.card {
+     border: 0px solid rgba(0,0,0,.125) !important;
+}
+.header-line{
+    border-bottom: 1px solid #ddd;
+}
+.custom-header{}
+.custom-header img{
+    float: left;
+    width: 150px;
+}
+.custom-class01{}
+.custom-class02{}
+.custom-class1{}
+.custom-class2{}
+.custom-class3{}
+
+.custom-class01{
+    padding: 20px 0 45px 0;
+}
+.custom-content1{
+    padding: 30px 0 0 0;
+}
+.custom-content2{
+    padding-bottom: 5px;
+}
+
+.card-body {
+    padding: 2rem 0rem !important;
+}
+.btn-primary {
+    width: 100% !important;
+}
+
+.btn-primary_master {
+    color: #fff;
+    background-color: #fe9901 !important;
+    border-color: #fe9901 !important;
+}
+.btn-primary_visa {
+    color: #fff;
+    background-color: #1A1F71 !important;
+    border-color: #1A1F71 !important;
+}
+
+.btn-primary_orange {
+    color: #fff;
+    background-color: #FF4500 !important;
+    border-color: #FF4500 !important;
+}
+.btn-primary_mobi {
+    color: #fff;
+    background-color: #d41668 !important;
+    border-color: #d41668 !important;
+}
+
+
