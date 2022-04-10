@@ -25,6 +25,7 @@ import {
   useParams,
   useLocation
 } from "react-router-dom";
+import CryptoJS from 'crypto-js' ;
 
 const Home = ({ match }) => {
   const userNameRef = useRef(null)
@@ -63,6 +64,22 @@ const Home = ({ match }) => {
     setTask('')
 
     // userNameRef.current.focus()
+    
+    
+    //incryption and decription===================
+    var data = "123456";
+    var key  = CryptoJS.enc.Latin1.parse('1234567812345678');
+    var iv   = CryptoJS.enc.Latin1.parse('1234567812345678');  
+    var encrypted = CryptoJS.AES.encrypt(
+      data,
+      key,
+      {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.ZeroPadding
+    });
+    console.log('encrypted: ' + encrypted) ;
+    var decrypted = CryptoJS.AES.decrypt(encrypted,key,{iv:iv,padding:CryptoJS.pad.ZeroPadding});
+    console.log('decrypted: '+decrypted.toString(CryptoJS.enc.Utf8));
+    //incryption and decription===================
+
 
 
   },[dispatch]);
@@ -78,6 +95,11 @@ const Home = ({ match }) => {
     setTask('')
 
     userNameRef.current.focus()
+
+
+
+
+
   }
 
   const handleRemoveTask = (id) => {
@@ -101,12 +123,10 @@ const Home = ({ match }) => {
           <Col md={{ span: 6, offset: 3 }}>
           <Row className="justify-content-md-center custom-class01">
               <Col className="text-center">
-                <Card.Text className='custom-class02'>
-                <h4>token: {token}</h4>
+              <h4>token: {token}</h4>
                 <h4> invoice_id: {invoice_id}</h4>
                
                 Click on the payment option you would like to use.
-                </Card.Text>
               </Col>
             </Row>
            <Row className="justify-content-md-center">
